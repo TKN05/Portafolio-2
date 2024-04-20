@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="mi-script.js"></script>
+
+<title>Portafolio</title>
+
+</head>
+<body>
+
+<div class="main-image">
+    <div class="main-text">
+        <h1 class="typing-animation" id="welcome-text"></h1>
+        <p class="typing-animation" id="subtext"></p>
+    </div>
+</div>
+
+<div class="container">
+   <div class="box nav-box" data-aos="fade-up" data-aos-duration="1000">
+    <nav>
+        <ul>
+                        <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="proyecto.html">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</div>
+
+   <div class="box content-box" data-aos="fade-up" data-aos-duration="1000">
+    <h2>¡Hola a todos!</h2>
+    <div class="typing-animation">
+        <p>Soy Martin, un estudiante técnico de programación en nivel secundario de Pontevedra, Buenos Aires, Argentina. A mis 18 años, he explorado diversos roles en programación, desde la gestión de bases de datos hasta el desarrollo de aplicaciones y sitios web, tanto en el front-end como en el back-end.</p>
+
+        <p>Mi verdadera pasión es el rol de Project Manager. Disfruto organizando equipos, asignando tareas y guiando a las personas para que utilicen su máximo potencial. Creo firmemente en la colaboración y la comunicación efectiva para alcanzar el éxito en cualquier proyecto.</p>
+
+        <p>Estoy emocionado por seguir creciendo en el campo de la tecnología, enfrentando nuevos desafíos y aprendiendo como profesional.</p>
+
+        <p>¡Gracias por conocerme!</p>
+    </div>
+<a href="https://www.instagram.com/martinbritez.05/"><i class="fab fa-instagram fa-2x"></i></a>
+    <a href="https://twitter.com/tiinnnnnnnnn"><i class="fab fa-twitter fa-2x"></i></a>
+    <a href="https://github.com/TKN05"><i class="fab fa-github fa-2x"></i></a>
+    <a href="mailto:britezmartin2005@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
+</div>
+
+
+</div>
+
+
+
+<script>
+    AOS.init();
+
+// Función para simular la animación de máquina de escribir
+function typeWriter(element, text, delay) {
+    let i = 0;
+    const typingInterval = setInterval(() => {
+        if (i < text.length) {
+            document.getElementById(element).textContent += text.charAt(i);
+            i++;
+        } else {
+            clearInterval(typingInterval);
+        }
+    }, delay);
+}
+
+// Iniciar la animación de máquina de escribir para el título de bienvenida
+typeWriter('welcome-text', 'Bienvenido', 100);
+
+// Iniciar la animación de máquina de escribir para el subtexto
+typeWriter('subtext', 'a mi portafolio', 100);
+
+// Función para ocultar la imagen principal cuando se hace scroll hacia abajo
+window.addEventListener('scroll', function() {
+    var mainImage = document.querySelector('.main-image');
+    var scrollPosition = window.scrollY;
+
+    // Si se hace scroll hacia abajo, agregar la clase "scrolled" a la imagen principal
+    if (scrollPosition > 0) {
+        mainImage.classList.add('scrolled');
+    } else {
+        mainImage.classList.remove('scrolled');
+    }
+});
+
+</script>
+</body>
+</html>

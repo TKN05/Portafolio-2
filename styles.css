@@ -1,0 +1,139 @@
+ body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: white;
+        
+    }
+    
+    .main-image {
+        background-image: url('fondo.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh; /* 100% del viewport height */
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        animation: fadeIn 2s ease forwards; /* Animación de aparición */
+        transition: transform 0.5s ease; /* Transición de la posición */
+    }
+
+    .main-image.scrolled {
+        transform: translateY(-100%); /* Mueve la imagen fuera de la vista */
+    }
+
+    .main-text {
+        font-size: 36px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row; /* Alinear horizontalmente */
+        height: calc(100vh - 50px); /* Altura ajustada automáticamente menos 50px */
+        margin-top: 25px; /* Menos espacio arriba */
+        margin-bottom: 25px; /* Menos espacio abajo */
+    }
+
+    .box {
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin: 20px;
+    }
+
+    .nav-box {
+        width: 15%; /* Anchura del nav */
+    }
+
+    .content-box {
+        width: 50%; /* Anchura del contenido principal */
+        text-align: center;
+        color: white;
+    }
+    
+    nav {
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px; /* Bordes redondeados */
+        align-items:left;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav ul li {
+        margin-bottom: 10px; /* Espacio entre elementos */
+    }
+    
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+   /* Agrega estilos para el footer y los enlaces de las redes sociales */
+     footer, nav, a{
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    footer a, nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        margin: 0 10px;
+        transition: transform 0.3s; /* Transición al pasar el cursor */
+        display: inline-block; /* Agregamos display inline-block */
+    }
+
+    footer a:hover, nav a:hover {
+        transform: scale(1.2); /* Agrandar al pasar el cursor */
+    }
+
+    .fab, .fas {
+        transition: color 0.3s; /* Transición de color */
+    }
+
+    .fab:hover, .fas:hover {
+        color: #C82727; /* Cambio de color al pasar el cursor */
+    }
+
+/*Proyecto*/
+
+  /* Añadimos estilos para la caja del proyecto */
+/* Estilos para la caja del proyecto */
+.project-box {
+  border: 1px solid #ffffff; /* Borde fino blanco */
+  padding: 20px; /* Espaciado interno */
+  margin-bottom: 20px; /* Margen inferior */
+  margin: 10px; /* Agrega un margen alrededor de la caja */
+}
+
+/* Asegura que el borde no se extienda más allá del ancho del contenedor */
+.project-box img {
+  max-width: 50%; /* La imagen no se extenderá más allá de su contenedor */
+  height: auto; /* La altura se ajusta automáticamente */
+}
+
+
